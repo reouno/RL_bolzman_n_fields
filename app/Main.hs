@@ -5,12 +5,14 @@ import System.Random
 
 main :: IO ()
 main = do
-    putStrLn "This is RL004bolzman."
+    putStrLn "This is RL_bolzman_n_fields."
     g <- getStdGen
     let randNums = randomRs (0,1) g :: [Double]
     qs_init <- init_qs (length rewards) (length $ rewards!!0)
     let qs = episodes 0 num_of_episodes rewards qs_init randNums
     print_Qs qs
+    putStrLn ""
+    putStrLn "Followings are learned actions."
     learned_actions (num_of_episodes + 1) (num_of_episodes + 1) 0 qs
     
 
