@@ -89,7 +89,7 @@ episodes t_s t_f rewards qs (randNum:randNums) =
     if t_s < t_f
         then
             let
-                qs' = fst $ episode t_s (t_s+length qs) 0 (take_action t_s (qs!!0) randNum) rewards qs randNums
+                qs' = fst $ episode t_s (t_s+length qs+5) 0 (take_action t_s (qs!!0) randNum) rewards qs randNums
                 randNums' = drop (length qs) randNums
             in
                 episodes (t_s+1) t_f rewards qs' randNums'

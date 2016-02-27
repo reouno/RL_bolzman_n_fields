@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-02-27 10:08:55.675506 UTC
+2016-02-27 11:36:43.822444 UTC
 
 interface main@main:Main 7103
-  interface hash: a328eeb3689000073df64838a36f5a73
-  ABI hash: 1af36082ad8e0d34cbadfe07201ad5ae
+  interface hash: ea21d1601d96316109bf0c4491296caa
+  ABI hash: db8a21a128e2a2c36b4ba97147a8207c
   export-list hash: 5931b7759c75fb948da271681e41027b
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 8aa46a5761ee3fae691d4d001a529b2e
@@ -156,12 +156,12 @@ d1b39f93965114dd623cfed60f3387ec
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 5, Strictness: <L,U(U)><L,1*U(U)><L,U(U)><L,U><L,U> -}
-ba0821269c7d803eaaa9341f4493cd08
+ab238504611eb06f28fd5286fbad905f
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
-01af757746a2b2752fd8e3d35f88cb75
+1e144ffba8b4207096dac00ab0b2abc2
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -169,7 +169,7 @@ ba0821269c7d803eaaa9341f4493cd08
      Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
-                        Main.main9
+                        Main.main10
                         GHC.Types.True
                         s of ds1 { (#,#) ipv ipv1 ->
                  case System.Random.theStdGen
@@ -181,27 +181,41 @@ ba0821269c7d803eaaa9341f4493cd08
                         var#
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
                  case Main.init_qs1
-                        Main.main8
-                        Main.main6
+                        Main.main9
+                        Main.main7
                         ipv2 of ds3 { (#,#) ipv4 ipv5 ->
                  let {
                    qs :: [[GHC.Types.Double]]
                    = Lib.$wepisodes 0 10000 Main.rewards ipv5 (Main.main_go ipv3)
                  } in
-                 case Main.main4
+                 case Main.main5
                         @ GHC.Types.Double
                         GHC.Float.$fFractionalDouble
                         GHC.Float.$fShowDouble
                         qs
                         ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.Types.[] @ GHC.Types.Char)
+                        GHC.Types.True
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main4
+                        GHC.Types.True
+                        ipv8 of ds6 { (#,#) ipv10 ipv11 ->
                  Main.learned_actions1
                    Main.main3
                    Main.main3
                    Main.main2
                    qs
-                   ipv6 } } } } }) -}
-4ce8a97b33707dbc397ad3b26afb6af5
-  main10 ::
+                   ipv10 } } } } } } }) -}
+b5ccabb9c3cc570ba8dff86d365fb2ab
+  main10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "This is RL_bolzman_n_fields."#) -}
+6306660a3b3def10fca961dd5bdfb700
+  main11 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
@@ -214,8 +228,12 @@ ba0821269c7d803eaaa9341f4493cd08
 b67055346546196a7ec798c115a30419
   main3 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 10001) -}
-5741de93440518bca9381e736ddd0aba
-  main4 ::
+479e9bd296d89fe1512acb0bb9923b40
+  main4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Followings are learned actions."#) -}
+80a98a22a410b3bb2c74bd3ff5493360
+  main5 ::
     (GHC.Real.Fractional t, GHC.Show.Show t) =>
     [[t]]
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -266,57 +284,53 @@ b67055346546196a7ec798c115a30419
                                                       (GHC.List.$w!! @ [t] qs ww)
                                                       1)))
                                              (GHC.Types.[] @ GHC.Show.ShowS)
-                                             Main.main5))))
+                                             Main.main6))))
                                  GHC.Types.True
                                  w of ds1 { (#,#) ipv ipv1 ->
                           $wa (GHC.Prim.+# ww 1) ipv } }
                  } in
                  $wa 0 eta }) -}
-6f65486a1d0ead0da0d6d0de76009dbf
-  main5 :: [GHC.Types.Char]
+6d1facd03f9a0f36146c78ebd5d3dbec
+  main6 :: [GHC.Types.Char]
   {- HasNoCafRefs,
      Unfolding: (GHC.Types.:
                    @ GHC.Types.Char
                    GHC.Show.shows8
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-1e52019ec65b233d5f144c44cb74b864
-  main6 :: GHC.Types.Int
+ec5705980b129d6cff875896c40b1cb1
+  main7 :: GHC.Types.Int
   {- Unfolding: (case GHC.List.$wlenAcc
                         @ GHC.Types.Double
-                        Main.main7
+                        Main.main8
                         0 of ww2 { DEFAULT ->
                  GHC.Types.I# ww2 }) -}
-22ce3542974c3685785fa9063ed61545
-  main7 :: [GHC.Types.Double]
+a99c3d193addf79ffa28860b109fbf23
+  main8 :: [GHC.Types.Double]
   {- Unfolding: (GHC.List.$w!!
                    @ [GHC.Types.Double]
                    Main.rewards
                    0) -}
-95bee70ca9e854a49ced049a78ed92b0
-  main8 :: GHC.Types.Int
+15b9b67e277c8b3017e72527cabb1958
+  main9 :: GHC.Types.Int
   {- Unfolding: (case GHC.List.$wlenAcc
                         @ [GHC.Types.Double]
                         Main.rewards
                         0 of ww2 { DEFAULT ->
                  GHC.Types.I# ww2 }) -}
-74d42511aa2108c8678c5e84f2d46b93
-  main9 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "This is RL004bolzman."#) -}
 ab65159166d29baa5b13e1e8ba7acb83
   main_go :: System.Random.StdGen -> [GHC.Types.Double]
   {- Arity: 1, Strictness: <L,U> -}
 45e816588338ab562309aad8c6fe21b6
   num_of_episodes :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10000) -}
-875e08e1559c5c33a2d4e351588e3ecf
+3d9ab46ec289b9e0c7d7ba0356d5bf82
   print_Qs ::
     (GHC.Real.Fractional t, GHC.Show.Show t) =>
     [[t]] -> GHC.Types.IO ()
   {- Arity: 4,
      Strictness: <L,U(A,C(C1(U)),A,A)><L,U(C(C1(U)),A,C(C1(U)))><S,U><L,U>,
      Unfolding: InlineRule (0, True, True)
-                Main.main4
+                Main.main5
                   `cast`
                 (forall t.
                  <GHC.Real.Fractional t>_R
@@ -369,14 +383,14 @@ b9150c47689da1447b523cce965aeeb0
 edf0f8b8f9f78c7648dd8e32d34be3db
   rand_5 :: GHC.Types.Double
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 0.0) -}
-0139ec1eafbecdcb31aaca360bad4a94
+d756ad58401186458ac7b8923f7200d0
   rewards :: [[GHC.Types.Double]]
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ [GHC.Types.Double]
                    Main.rewards15
                    Main.rewards1) -}
-68bc7bfba0b8bcd7a17a22c39e9574d6
+0600673337e7c513ba8f8dd7844be5e4
   rewards1 :: [[GHC.Types.Double]]
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -386,9 +400,9 @@ edf0f8b8f9f78c7648dd8e32d34be3db
 b3b7d6df3c78f117575ce6c59b2ae413
   rewards10 :: GHC.Types.Double
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 1.0) -}
-b197cba905c3390d25b9e1c4f5d7d0ee
+60e545acc3ec9a57b305c8c364e03843
   rewards11 :: GHC.Types.Double
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 20.0) -}
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 100.0) -}
 17340f2cd486a144804728e1176691cc
   rewards12 :: [GHC.Types.Double]
   {- HasNoCafRefs, Strictness: m2,
@@ -423,7 +437,7 @@ b197cba905c3390d25b9e1c4f5d7d0ee
 73a0d3f79b4c655aee226c3399cf542c
   rewards17 :: GHC.Types.Double
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# -1.0) -}
-21e265f7c8b9a0612cb0e0211352ff44
+0b44809910595b60c31b0755347d398b
   rewards2 :: [[GHC.Types.Double]]
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -457,7 +471,7 @@ b197cba905c3390d25b9e1c4f5d7d0ee
 d6f0d17f633f9e22c460e66334e3db45
   rewards7 :: GHC.Types.Double
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 2.0) -}
-e62200bc079f321295ed41c445dd3479
+30103cb4ee266e465765c495a521224f
   rewards8 :: [GHC.Types.Double]
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (GHC.Types.:
